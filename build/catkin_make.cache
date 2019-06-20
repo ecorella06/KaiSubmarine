@@ -1,0 +1,2 @@
+uuv_control_cascaded_pids:uuv_descriptions:uuv_gazebo_worlds:uuv_tutorial_seabed_world
+-DCATKIN_DEVEL_PREFIX=/home/kai/catkin_ws_finalKai/devel -DCMAKE_INSTALL_PREFIX=/home/kai/catkin_ws_finalKai/install -G Unix Makefiles

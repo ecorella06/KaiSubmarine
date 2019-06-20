@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+
+<model name="seabed">
+  <static>true</static>
+  <link name="seabed_link">
+
+  <visual name="surface">
+    <cast_shadows>false</cast_shadows>
+    <pose>0 0 0 0 0 0</pose>
+    <geometry>
+      <box>
+        <size>60 60 .1</size>
+      </box>
+    </geometry>
+    <material>
+      <script>
+        <uri>model://ocean_box/materials/scripts</uri>
+        <uri>model://ocean_box/materials/textures</uri>
+        <name>UUV/Water</name>
+      </script>
+    </material>
+  </visual>
+
+  <visual name="seafloor">
+    <pose>0 0 0 0 0 0</pose>
+    <geometry>
+      <mesh><uri>model://seabed/seabed.stl</uri><scale>1 1 1</scale></mesh>
+    </geometry>
+    <material>
+      <script>
+        <uri>model://ocean/materials/scripts</uri>
+        <uri>model://ocean/materials/textures</uri>
+        <name>Sand</name>
+      </script>
+    </material>
+  </visual>
+
+  <collision name="seafloor">
+    <pose>0 0 0 0 0 0</pose>
+    <geometry>
+      <mesh><uri>model://seabed/seabed.stl</uri><scale>1 1 1</scale></mesh>
+    </geometry>
+  </collision>
+
+  </link>
+</model>
+</sdf>
